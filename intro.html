@@ -1,0 +1,74 @@
+<!doctype html>
+
+<title>Web Lab-by Sean</title>
+
+<html>
+    <meta charset="utf-8">
+
+
+
+
+    <head>
+        <style>
+        
+            #head1{background-color: gray;border: 10px solid gray;}
+        </style>
+
+       
+        
+    </head>
+
+
+
+
+    <script>
+        var settime = 3;
+
+       // var menu1 = document.querySelector('')
+       
+        function introChange()
+        {
+            m=Math.floor(SetTime%60)+"sec";
+            var msg=m+"second"; 
+            Documents.all.ViewTimer.innerHTML=msg;
+            
+            settime--;
+
+            if(settime<0)
+            {
+                clearInterval(tid);
+                alert("next");
+                location.href="lobby2.html";
+                
+            }
+        }
+        window.onload = function TimerStart(){ tid=setInterval('msg_time()',1000) };
+
+    
+    </script>
+
+    
+
+
+    <body>
+        <style>
+            #category{background-color: rgb(201, 204, 203); border: 2px solid white; width: 200px;height: 700px;float: left;}
+            #shortcut{ float:right;}
+            #menu{background-color:beige; border:3px solid aquamarine; float: left;border-color: aquamarine;  }
+            #menu2{background-color:beige;border:3px solid aquamarine; float: left;border-color:aquamarine; position: absolute;left: 0;top:200;}
+        </style>
+                
+        
+        
+        
+       <div id="ViewTimer"></div>
+
+
+
+
+
+     
+
+    </body>
+
+</html>
